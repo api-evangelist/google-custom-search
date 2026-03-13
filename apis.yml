@@ -1,0 +1,44 @@
+name: Google Custom Search API
+description: >-
+  The Google Custom Search JSON API allows programmatic searches over a website
+  or collection of websites. It returns metadata about the search performed,
+  metadata about the search engine used, and the search results including web
+  pages and images.
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/google-custom-search/refs/heads/main/apis.yml
+created: '2026-03-13'
+modified: '2026-03-13'
+specificationVersion: '0.18'
+tags:
+  - Search
+  - Custom Search
+  - Web Search
+  - Image Search
+  - Google
+apis:
+  - name: Google Custom Search JSON API
+    description: >-
+      Enables programmatic web and image searches over websites or collections
+      of websites using Programmable Search Engines, returning structured
+      search results with metadata.
+    humanURL: https://developers.google.com/custom-search/v1/overview
+    baseURL: https://customsearch.googleapis.com
+    properties:
+      - type: OpenAPI
+        url: openapi/openapi.yml
+      - type: JSONSchema
+        url: json-schema/SearchResult.json
+    tags:
+      - Search
+      - Web
+      - Images
+common:
+  - type: GettingStarted
+    url: https://developers.google.com/custom-search/v1/overview
+  - type: Pricing
+    url: https://developers.google.com/custom-search/v1/overview#pricing
+  - type: JSON-LD
+    url: json-ld/context.jsonld
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

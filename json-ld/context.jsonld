@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cse": "https://customsearch.googleapis.com/customsearch/v1/",
+    "SearchResultsPage": "schema:SearchResultsPage",
+    "SearchAction": "schema:SearchAction",
+    "query": "schema:query",
+    "result": "schema:result",
+    "WebPage": "schema:WebPage",
+    "name": "schema:name",
+    "url": "schema:url",
+    "description": "schema:description",
+    "image": "schema:image",
+    "thumbnailUrl": "schema:thumbnailUrl",
+    "datePublished": "schema:datePublished",
+    "ItemList": "schema:ItemList",
+    "numberOfItems": "schema:numberOfItems",
+    "itemListElement": "schema:itemListElement"
+  }
+}

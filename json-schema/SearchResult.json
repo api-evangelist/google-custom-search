@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "SearchResult.json",
+  "title": "Google Custom Search Result",
+  "description": "A search result returned by the Google Custom Search JSON API.",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "type": "string",
+      "description": "The kind of result."
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the search result."
+    },
+    "htmlTitle": {
+      "type": "string",
+      "description": "The title with HTML formatting."
+    },
+    "link": {
+      "type": "string",
+      "format": "uri",
+      "description": "The URL of the search result."
+    },
+    "displayLink": {
+      "type": "string",
+      "description": "An abridged version of the URL."
+    },
+    "snippet": {
+      "type": "string",
+      "description": "A snippet of the search result."
+    },
+    "htmlSnippet": {
+      "type": "string",
+      "description": "The snippet with HTML formatting."
+    },
+    "cacheId": {
+      "type": "string",
+      "description": "The cache ID for Google's cached version."
+    },
+    "formattedUrl": {
+      "type": "string",
+      "description": "The formatted URL."
+    },
+    "htmlFormattedUrl": {
+      "type": "string",
+      "description": "The formatted URL with HTML formatting."
+    },
+    "pagemap": {
+      "type": "object",
+      "description": "PageMap information for the result."
+    },
+    "mime": {
+      "type": "string",
+      "description": "The MIME type of the result."
+    },
+    "fileFormat": {
+      "type": "string",
+      "description": "The file format of the result."
+    },
+    "image": {
+      "type": "object",
+      "description": "Image information if this is an image result.",
+      "properties": {
+        "contextLink": {
+          "type": "string"
+        },
+        "height": {
+          "type": "integer"
+        },
+        "width": {
+          "type": "integer"
+        },
+        "byteSize": {
+          "type": "integer"
+        },
+        "thumbnailLink": {
+          "type": "string"
+        },
+        "thumbnailHeight": {
+          "type": "integer"
+        },
+        "thumbnailWidth": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

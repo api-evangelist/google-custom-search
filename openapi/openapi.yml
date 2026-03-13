@@ -1,0 +1,245 @@
+openapi: 3.1.0
+info:
+  title: Google Custom Search JSON API
+  description: >-
+    The Google Custom Search JSON API allows programmatic searches over a
+    website or collection of websites. It returns metadata about the search
+    performed, metadata about the search engine used, and the search results.
+  version: 1.0.0
+  contact:
+    name: Google
+    url: https://developers.google.com/custom-search/v1/overview
+servers:
+  - url: https://customsearch.googleapis.com
+paths:
+  /customsearch/v1:
+    get:
+      operationId: searchCustomSearch
+      summary: Custom Search
+      description: >-
+        Returns metadata about the search performed, the search engine, and
+        the search results.
+      parameters:
+        - name: key
+          in: query
+          required: true
+          description: API key.
+          schema:
+            type: string
+        - name: cx
+          in: query
+          required: true
+          description: The Programmable Search Engine ID.
+          schema:
+            type: string
+        - name: q
+          in: query
+          required: true
+          description: The search query.
+          schema:
+            type: string
+        - name: num
+          in: query
+          description: Number of results to return (1-10).
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 10
+        - name: start
+          in: query
+          description: The index of the first result to return.
+          schema:
+            type: integer
+        - name: lr
+          in: query
+          description: Language restriction.
+          schema:
+            type: string
+        - name: safe
+          in: query
+          description: Safe search setting.
+          schema:
+            type: string
+            enum:
+              - active
+              - off
+        - name: searchType
+          in: query
+          description: Type of search.
+          schema:
+            type: string
+            enum:
+              - image
+        - name: imgSize
+          in: query
+          description: Image size filter.
+          schema:
+            type: string
+        - name: imgType
+          in: query
+          description: Image type filter.
+          schema:
+            type: string
+        - name: dateRestrict
+          in: query
+          description: Restrict results by date.
+          schema:
+            type: string
+        - name: sort
+          in: query
+          description: Sort expression.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+  /customsearch/v1/siterestrict:
+    get:
+      operationId: searchSiteRestrict
+      summary: Custom Search Site Restricted
+      description: >-
+        Returns search results restricted to specific sites, with the same
+        metadata as the standard search.
+      parameters:
+        - name: key
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: cx
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: num
+          in: query
+          schema:
+            type: integer
+        - name: start
+          in: query
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: key
+  schemas:
+    SearchResponse:
+      type: object
+      properties:
+        kind:
+          type: string
+        url:
+          type: object
+          properties:
+            type:
+              type: string
+            template:
+              type: string
+        queries:
+          type: object
+          properties:
+            request:
+              type: array
+              items:
+                $ref: '#/components/schemas/Query'
+            nextPage:
+              type: array
+              items:
+                $ref: '#/components/schemas/Query'
+        context:
+          type: object
+        searchInformation:
+          type: object
+          properties:
+            searchTime:
+              type: number
+            formattedSearchTime:
+              type: string
+            totalResults:
+              type: string
+            formattedTotalResults:
+              type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/SearchResult'
+    Query:
+      type: object
+      properties:
+        title:
+          type: string
+        totalResults:
+          type: string
+        searchTerms:
+          type: string
+        count:
+          type: integer
+        startIndex:
+          type: integer
+    SearchResult:
+      type: object
+      properties:
+        kind:
+          type: string
+        title:
+          type: string
+        htmlTitle:
+          type: string
+        link:
+          type: string
+        displayLink:
+          type: string
+        snippet:
+          type: string
+        htmlSnippet:
+          type: string
+        cacheId:
+          type: string
+        formattedUrl:
+          type: string
+        htmlFormattedUrl:
+          type: string
+        pagemap:
+          type: object
+        mime:
+          type: string
+        fileFormat:
+          type: string
+        image:
+          type: object
+          properties:
+            contextLink:
+              type: string
+            height:
+              type: integer
+            width:
+              type: integer
+            byteSize:
+              type: integer
+            thumbnailLink:
+              type: string
+            thumbnailHeight:
+              type: integer
+            thumbnailWidth:
+              type: integer
+security:
+  - ApiKeyAuth: []
