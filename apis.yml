@@ -1,3 +1,4 @@
+aid: google-custom-search
 name: Google Custom Search API
 description: >-
   The Google Custom Search JSON API allows programmatic searches over a website
@@ -7,8 +8,9 @@ description: >-
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/google-custom-search/refs/heads/main/apis.yml
 created: '2026-03-13'
-modified: '2026-03-13'
-specificationVersion: '0.18'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+type: Index
 tags:
   - Search
   - Custom Search
@@ -23,20 +25,40 @@ apis:
       search results with metadata.
     humanURL: https://developers.google.com/custom-search/v1/overview
     baseURL: https://customsearch.googleapis.com
-    properties:
-      - type: OpenAPI
-        url: openapi/openapi.yml
-      - type: JSONSchema
-        url: json-schema/SearchResult.json
     tags:
       - Search
       - Web
       - Images
+    properties:
+      - type: Documentation
+        url: https://developers.google.com/custom-search/v1/reference/rest
+      - type: OpenAPI
+        url: openapi/openapi.yml
+      - type: Authentication
+        url: https://developers.google.com/custom-search/v1/introduction
+      - type: Getting Started
+        url: https://developers.google.com/custom-search/v1/overview
+      - type: JSONSchema
+        url: json-schema/SearchResult.json
 common:
-  - type: GettingStarted
+  - type: Portal
+    url: https://developers.google.com/custom-search
+  - type: Getting Started
     url: https://developers.google.com/custom-search/v1/overview
+  - type: Documentation
+    url: https://developers.google.com/custom-search/v1/overview
+  - type: Authentication
+    url: https://developers.google.com/custom-search/v1/introduction
   - type: Pricing
     url: https://developers.google.com/custom-search/v1/overview#pricing
+  - type: Terms of Service
+    url: https://developers.google.com/terms
+  - type: Privacy Policy
+    url: https://policies.google.com/privacy
+  - type: Status
+    url: https://status.cloud.google.com/
+  - type: Support
+    url: https://developers.google.com/custom-search/v1/overview#support
   - type: JSON-LD
     url: json-ld/context.jsonld
 maintainers:
