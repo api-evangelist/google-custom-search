@@ -1,5 +1,5 @@
 aid: google-custom-search
-name: Google Custom Search API
+name: Google Custom Search
 description: >-
   The Google Custom Search JSON API allows programmatic searches over a website
   or collection of websites. It returns metadata about the search performed,
