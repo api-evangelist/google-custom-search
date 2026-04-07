@@ -12,11 +12,11 @@ modified: '2026-03-16'
 specificationVersion: '0.19'
 type: Index
 tags:
-  - Search
   - Custom Search
-  - Web Search
-  - Image Search
   - Google
+  - Image Search
+  - Search
+  - Web Search
 apis:
   - name: Google Custom Search JSON API
     description: >-
@@ -26,9 +26,9 @@ apis:
     humanURL: https://developers.google.com/custom-search/v1/overview
     baseURL: https://customsearch.googleapis.com
     tags:
+      - Images
       - Search
       - Web
-      - Images
     properties:
       - type: Documentation
         url: https://developers.google.com/custom-search/v1/reference/rest

@@ -97,6 +97,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SearchResponse'
+      tags:
+        - Customsearch
   /customsearch/v1/siterestrict:
     get:
       operationId: searchSiteRestrict
@@ -135,6 +137,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SearchResponse'
+      tags:
+        - Customsearch
 components:
   securitySchemes:
     ApiKeyAuth:
@@ -243,3 +247,5 @@ components:
               type: integer
 security:
   - ApiKeyAuth: []
+tags:
+  - name: Customsearch
