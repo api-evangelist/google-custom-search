@@ -15,7 +15,7 @@ paths:
   /customsearch/v1:
     get:
       operationId: searchCustomSearch
-      summary: Custom Search
+      summary: Google Custom Search Custom Search
       description: >-
         Returns metadata about the search performed, the search engine, and
         the search results.
@@ -100,7 +100,7 @@ paths:
   /customsearch/v1/siterestrict:
     get:
       operationId: searchSiteRestrict
-      summary: Custom Search Site Restricted
+      summary: Google Custom Search Custom Search Site Restricted
       description: >-
         Returns search results restricted to specific sites, with the same
         metadata as the standard search.
