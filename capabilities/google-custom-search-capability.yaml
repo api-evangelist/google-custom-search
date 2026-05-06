@@ -1,0 +1,251 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Custom Search JSON API
+  description: The Google Custom Search JSON API allows programmatic searches over a website or collection of websites. It
+    returns metadata about the search performed, metadata about the search engine used, and the search results.
+  tags:
+  - Google
+  - Custom
+  - Search
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: google-custom-search
+    baseUri: https://customsearch.googleapis.com
+    description: Google Custom Search JSON API HTTP API.
+    authentication:
+      type: apikey
+      in: query
+      name: key
+      value: '{{GOOGLE_CUSTOM_SEARCH_TOKEN}}'
+    resources:
+    - name: customsearch-v1
+      path: /customsearch/v1
+      operations:
+      - name: searchcustomsearch
+        method: GET
+        description: Google Custom Search Custom Search
+        inputParameters:
+        - name: key
+          in: query
+          type: string
+          required: true
+          description: API key.
+        - name: cx
+          in: query
+          type: string
+          required: true
+          description: The Programmable Search Engine ID.
+        - name: q
+          in: query
+          type: string
+          required: true
+          description: The search query.
+        - name: num
+          in: query
+          type: integer
+          description: Number of results to return (1-10).
+        - name: start
+          in: query
+          type: integer
+          description: The index of the first result to return.
+        - name: lr
+          in: query
+          type: string
+          description: Language restriction.
+        - name: safe
+          in: query
+          type: string
+          description: Safe search setting.
+        - name: searchType
+          in: query
+          type: string
+          description: Type of search.
+        - name: imgSize
+          in: query
+          type: string
+          description: Image size filter.
+        - name: imgType
+          in: query
+          type: string
+          description: Image type filter.
+        - name: dateRestrict
+          in: query
+          type: string
+          description: Restrict results by date.
+        - name: sort
+          in: query
+          type: string
+          description: Sort expression.
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: customsearch-v1-siterestrict
+      path: /customsearch/v1/siterestrict
+      operations:
+      - name: searchsiterestrict
+        method: GET
+        description: Google Custom Search Custom Search Site Restricted
+        inputParameters:
+        - name: key
+          in: query
+          type: string
+          required: true
+        - name: cx
+          in: query
+          type: string
+          required: true
+        - name: q
+          in: query
+          type: string
+          required: true
+        - name: num
+          in: query
+          type: integer
+        - name: start
+          in: query
+          type: integer
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: google-custom-search-rest
+    description: REST adapter for Google Custom Search JSON API.
+    resources:
+    - path: /customsearch/v1
+      name: searchcustomsearch
+      operations:
+      - method: GET
+        name: searchcustomsearch
+        description: Google Custom Search Custom Search
+        call: google-custom-search.searchcustomsearch
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /customsearch/v1/siterestrict
+      name: searchsiterestrict
+      operations:
+      - method: GET
+        name: searchsiterestrict
+        description: Google Custom Search Custom Search Site Restricted
+        call: google-custom-search.searchsiterestrict
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: google-custom-search-mcp
+    transport: http
+    description: MCP adapter for Google Custom Search JSON API for AI agent use.
+    tools:
+    - name: searchcustomsearch
+      description: Google Custom Search Custom Search
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-custom-search.searchcustomsearch
+      with:
+        key: tools.key
+        cx: tools.cx
+        q: tools.q
+        num: tools.num
+        start: tools.start
+        lr: tools.lr
+        safe: tools.safe
+        searchType: tools.searchType
+        imgSize: tools.imgSize
+        imgType: tools.imgType
+        dateRestrict: tools.dateRestrict
+        sort: tools.sort
+      inputParameters:
+      - name: key
+        type: string
+        description: API key.
+        required: true
+      - name: cx
+        type: string
+        description: The Programmable Search Engine ID.
+        required: true
+      - name: q
+        type: string
+        description: The search query.
+        required: true
+      - name: num
+        type: integer
+        description: Number of results to return (1-10).
+      - name: start
+        type: integer
+        description: The index of the first result to return.
+      - name: lr
+        type: string
+        description: Language restriction.
+      - name: safe
+        type: string
+        description: Safe search setting.
+      - name: searchType
+        type: string
+        description: Type of search.
+      - name: imgSize
+        type: string
+        description: Image size filter.
+      - name: imgType
+        type: string
+        description: Image type filter.
+      - name: dateRestrict
+        type: string
+        description: Restrict results by date.
+      - name: sort
+        type: string
+        description: Sort expression.
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: searchsiterestrict
+      description: Google Custom Search Custom Search Site Restricted
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-custom-search.searchsiterestrict
+      with:
+        key: tools.key
+        cx: tools.cx
+        q: tools.q
+        num: tools.num
+        start: tools.start
+      inputParameters:
+      - name: key
+        type: string
+        description: key
+        required: true
+      - name: cx
+        type: string
+        description: cx
+        required: true
+      - name: q
+        type: string
+        description: q
+        required: true
+      - name: num
+        type: integer
+        description: num
+      - name: start
+        type: integer
+        description: start
+      outputParameters:
+      - type: object
+        mapping: $.
+binds:
+- namespace: env
+  keys:
+    GOOGLE_CUSTOM_SEARCH_TOKEN: GOOGLE_CUSTOM_SEARCH_TOKEN
