@@ -1,0 +1,149 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Custom Search JSON API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "key",
+      "value": "{{key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Customsearch",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Custom Search Custom Search",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://customsearch.googleapis.com/customsearch/v1",
+            "params": [
+              {
+                "name": "key",
+                "value": "",
+                "type": "query",
+                "description": "API key."
+              },
+              {
+                "name": "cx",
+                "value": "",
+                "type": "query",
+                "description": "The Programmable Search Engine ID."
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query",
+                "description": "The search query."
+              },
+              {
+                "name": "num",
+                "value": "",
+                "type": "query",
+                "description": "Number of results to return (1-10)."
+              },
+              {
+                "name": "start",
+                "value": "",
+                "type": "query",
+                "description": "The index of the first result to return."
+              },
+              {
+                "name": "lr",
+                "value": "",
+                "type": "query",
+                "description": "Language restriction."
+              },
+              {
+                "name": "safe",
+                "value": "",
+                "type": "query",
+                "description": "Safe search setting."
+              },
+              {
+                "name": "searchType",
+                "value": "",
+                "type": "query",
+                "description": "Type of search."
+              },
+              {
+                "name": "imgSize",
+                "value": "",
+                "type": "query",
+                "description": "Image size filter."
+              },
+              {
+                "name": "imgType",
+                "value": "",
+                "type": "query",
+                "description": "Image type filter."
+              },
+              {
+                "name": "dateRestrict",
+                "value": "",
+                "type": "query",
+                "description": "Restrict results by date."
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query",
+                "description": "Sort expression."
+              }
+            ]
+          },
+          "docs": "Returns metadata about the search performed, the search engine, and the search results."
+        },
+        {
+          "info": {
+            "name": "Google Custom Search Custom Search Site Restricted",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://customsearch.googleapis.com/customsearch/v1/siterestrict",
+            "params": [
+              {
+                "name": "key",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "cx",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "q",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "num",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "start",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns search results restricted to specific sites, with the same metadata as the standard search."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
