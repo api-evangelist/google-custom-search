@@ -4,7 +4,7 @@ description: >-
   The Google Custom Search JSON API allows programmatic searches over a website or collection of websites. It returns
   metadata about the search performed, metadata about the search engine used, and the search results including web pages
   and images.
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/google-custom-search/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
