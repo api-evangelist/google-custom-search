@@ -39,6 +39,12 @@ apis:
       - type: JSONSchema
         url: json-schema/SearchResult.json
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-custom-search-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-custom-search-domain-security.yml
+  - type: Authentication
+    url: authentication/google-custom-search-authentication.yml
   - type: Portal
     url: https://developers.google.com/custom-search
   - type: GettingStarted
