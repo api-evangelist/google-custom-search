@@ -39,6 +39,8 @@ apis:
       - type: JSONSchema
         url: json-schema/SearchResult.json
 common:
+  - type: AgenticAccess
+    url: agentic-access/google-custom-search-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/google-custom-search-vulnerability-disclosure.yml
   - type: DomainSecurity
