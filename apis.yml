@@ -4,7 +4,20 @@ description: >-
   The Google Custom Search JSON API allows programmatic searches over a website or collection of websites. It returns
   metadata about the search performed, metadata about the search engine used, and the search results including web pages
   and images.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-custom-search.png
 url: https://raw.githubusercontent.com/api-evangelist/google-custom-search/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
@@ -17,28 +30,27 @@ tags:
   - Search
   - Web Search
 apis:
-  - name: Google Custom Search JSON API
-    description: >-
-      Enables programmatic web and image searches over websites or collections of websites using Programmable Search
-      Engines, returning structured search results with metadata.
-    humanURL: https://developers.google.com/custom-search/v1/overview
-    baseURL: https://customsearch.googleapis.com
-    tags:
-      - Images
-      - Search
-      - Web
-    properties:
-      - type: Documentation
-        url: https://developers.google.com/custom-search/v1/reference/rest
-      - type: OpenAPI
-        url: openapi/openapi.yml
-      - type: Authentication
-        url: https://developers.google.com/custom-search/v1/introduction
-      - type: GettingStarted
-        url: https://developers.google.com/custom-search/v1/overview
-      - type: JSONSchema
-        url: json-schema/SearchResult.json
+- aid: google-custom-search:google-custom-search-customsearch-api
+  name: Google Custom Search Customsearch API
+  description: The Customsearch API from Google Custom Search — 2 operation(s) for customsearch.
+  humanURL: https://developers.google.com/custom-search/v1/overview
+  baseURL: https://customsearch.googleapis.com
+  tags:
+  - Customsearch
+  properties:
+  - type: OpenAPI
+    url: openapi/google-custom-search-customsearch-api-openapi.yml
+  - type: Documentation
+    url: https://developers.google.com/custom-search/v1/reference/rest
+  - type: Authentication
+    url: https://developers.google.com/custom-search/v1/introduction
+  - type: GettingStarted
+    url: https://developers.google.com/custom-search/v1/overview
+  - type: JSONSchema
+    url: json-schema/SearchResult.json
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/google-custom-search/overview
   - type: AgenticAccess
     url: agentic-access/google-custom-search-agentic-access.yml
   - type: VulnerabilityDisclosure
