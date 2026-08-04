@@ -1,0 +1,383 @@
+{
+  "info": {
+    "_postman_id": "a01e7771-d387-4743-b30c-3a6fe2657718",
+    "name": "Google Custom Search JSON Customsearch API",
+    "description": "The Google Custom Search JSON API allows programmatic searches over a website or collection of websites. It returns metadata about the search performed, metadata about the search engine used, and the search results.\n\nContact Support:\n Name: Google",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:48:56.000Z",
+    "updatedAt": "2026-07-28T01:48:56.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-a01e7771-d387-4743-b30c-3a6fe2657718"
+  },
+  "item": [
+    {
+      "name": "customsearch",
+      "item": [
+        {
+          "name": "v1",
+          "item": [
+            {
+              "name": "siterestrict",
+              "item": [
+                {
+                  "name": "Google Custom Search Custom Search Site Restricted",
+                  "id": "b4b9035e-a55e-4a59-a5b3-bc3c06c49c7b",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/customsearch/v1/siterestrict?key=<string>&cx=<string>&q=<string>&num=<integer>&start=<integer>",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "customsearch",
+                        "v1",
+                        "siterestrict"
+                      ],
+                      "query": [
+                        {
+                          "description": "(Required) ",
+                          "key": "key",
+                          "value": "<string>"
+                        },
+                        {
+                          "description": "(Required) ",
+                          "key": "cx",
+                          "value": "<string>"
+                        },
+                        {
+                          "description": "(Required) ",
+                          "key": "q",
+                          "value": "<string>"
+                        },
+                        {
+                          "key": "num",
+                          "value": "<integer>"
+                        },
+                        {
+                          "key": "start",
+                          "value": "<integer>"
+                        }
+                      ]
+                    },
+                    "description": "Returns search results restricted to specific sites, with the same metadata as the standard search."
+                  },
+                  "response": [
+                    {
+                      "id": "2410b9e1-fdb1-40f4-bea8-af856e8d4432",
+                      "name": "Successful response",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/customsearch/v1/siterestrict?key=<API Key>&cx=<string>&q=<string>&num=<integer>&start=<integer>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "customsearch",
+                            "v1",
+                            "siterestrict"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) ",
+                              "key": "key",
+                              "value": "<API Key>"
+                            },
+                            {
+                              "description": "(Required) ",
+                              "key": "cx",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "(Required) ",
+                              "key": "q",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "num",
+                              "value": "<integer>"
+                            },
+                            {
+                              "key": "start",
+                              "value": "<integer>"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"kind\": \"<string>\",\n  \"url\": {\n    \"type\": \"<string>\",\n    \"template\": \"<string>\"\n  },\n  \"queries\": {\n    \"request\": [\n      {\n        \"title\": \"<string>\",\n        \"totalResults\": \"<string>\",\n        \"searchTerms\": \"<string>\",\n        \"count\": \"<integer>\",\n        \"startIndex\": \"<integer>\"\n      },\n      {\n        \"title\": \"<string>\",\n        \"totalResults\": \"<string>\",\n        \"searchTerms\": \"<string>\",\n        \"count\": \"<integer>\",\n        \"startIndex\": \"<integer>\"\n      }\n    ],\n    \"nextPage\": [\n      {\n        \"title\": \"<string>\",\n        \"totalResults\": \"<string>\",\n        \"searchTerms\": \"<string>\",\n        \"count\": \"<integer>\",\n        \"startIndex\": \"<integer>\"\n      },\n      {\n        \"title\": \"<string>\",\n        \"totalResults\": \"<string>\",\n        \"searchTerms\": \"<string>\",\n        \"count\": \"<integer>\",\n        \"startIndex\": \"<integer>\"\n      }\n    ]\n  },\n  \"context\": {},\n  \"searchInformation\": {\n    \"searchTime\": \"<number>\",\n    \"formattedSearchTime\": \"<string>\",\n    \"totalResults\": \"<string>\",\n    \"formattedTotalResults\": \"<string>\"\n  },\n  \"items\": [\n    {\n      \"kind\": \"<string>\",\n      \"title\": \"<string>\",\n      \"htmlTitle\": \"<string>\",\n      \"link\": \"<string>\",\n      \"displayLink\": \"<string>\",\n      \"snippet\": \"<string>\",\n      \"htmlSnippet\": \"<string>\",\n      \"cacheId\": \"<string>\",\n      \"formattedUrl\": \"<string>\",\n      \"htmlFormattedUrl\": \"<string>\",\n      \"pagemap\": {},\n      \"mime\": \"<string>\",\n      \"fileFormat\": \"<string>\",\n      \"image\": {\n        \"contextLink\": \"<string>\",\n        \"height\": \"<integer>\",\n        \"width\": \"<integer>\",\n        \"byteSize\": \"<integer>\",\n        \"thumbnailLink\": \"<string>\",\n        \"thumbnailHeight\": \"<integer>\",\n        \"thumbnailWidth\": \"<integer>\"\n      }\n    },\n    {\n      \"kind\": \"<string>\",\n      \"title\": \"<string>\",\n      \"htmlTitle\": \"<string>\",\n      \"link\": \"<string>\",\n      \"displayLink\": \"<string>\",\n      \"snippet\": \"<string>\",\n      \"htmlSnippet\": \"<string>\",\n      \"cacheId\": \"<string>\",\n      \"formattedUrl\": \"<string>\",\n      \"htmlFormattedUrl\": \"<string>\",\n      \"pagemap\": {},\n      \"mime\": \"<string>\",\n      \"fileFormat\": \"<string>\",\n      \"image\": {\n        \"contextLink\": \"<string>\",\n        \"height\": \"<integer>\",\n        \"width\": \"<integer>\",\n        \"byteSize\": \"<integer>\",\n        \"thumbnailLink\": \"<string>\",\n        \"thumbnailHeight\": \"<integer>\",\n        \"thumbnailWidth\": \"<integer>\"\n      }\n    }\n  ]\n}",
+                      "createdAt": "2026-07-28T01:48:57.000Z",
+                      "updatedAt": "2026-07-28T01:48:57.000Z",
+                      "uid": "35240-2410b9e1-fdb1-40f4-bea8-af856e8d4432"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T01:48:57.000Z",
+                  "updatedAt": "2026-07-28T01:48:57.000Z",
+                  "uid": "35240-b4b9035e-a55e-4a59-a5b3-bc3c06c49c7b"
+                }
+              ],
+              "id": "29bbe217-474e-4f4e-8d7a-d3d61b09107e",
+              "createdAt": "2026-07-28T01:48:57.000Z",
+              "updatedAt": "2026-07-28T01:48:57.000Z",
+              "uid": "35240-29bbe217-474e-4f4e-8d7a-d3d61b09107e"
+            },
+            {
+              "name": "Google Custom Search Custom Search",
+              "id": "beaabfb6-686d-498a-8205-896ac019cb69",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/customsearch/v1?key=<string>&cx=<string>&q=<string>&num=<integer>&start=<integer>&lr=<string>&safe=active&searchType=image&imgSize=<string>&imgType=<string>&dateRestrict=<string>&sort=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "customsearch",
+                    "v1"
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) API key.",
+                      "key": "key",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) The Programmable Search Engine ID.",
+                      "key": "cx",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) The search query.",
+                      "key": "q",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Number of results to return (1-10).",
+                      "key": "num",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "The index of the first result to return.",
+                      "key": "start",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "Language restriction.",
+                      "key": "lr",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Safe search setting.",
+                      "key": "safe",
+                      "value": "active"
+                    },
+                    {
+                      "description": "Type of search.",
+                      "key": "searchType",
+                      "value": "image"
+                    },
+                    {
+                      "description": "Image size filter.",
+                      "key": "imgSize",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Image type filter.",
+                      "key": "imgType",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Restrict results by date.",
+                      "key": "dateRestrict",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Sort expression.",
+                      "key": "sort",
+                      "value": "<string>"
+                    }
+                  ]
+                },
+                "description": "Returns metadata about the search performed, the search engine, and the search results."
+              },
+              "response": [
+                {
+                  "id": "a3e258ac-052d-42ac-bcdc-b5a59c16f083",
+                  "name": "Successful response",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/customsearch/v1?key=<API Key>&cx=<string>&q=<string>&num=<integer>&start=<integer>&lr=<string>&safe=active&searchType=image&imgSize=<string>&imgType=<string>&dateRestrict=<string>&sort=<string>",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "customsearch",
+                        "v1"
+                      ],
+                      "query": [
+                        {
+                          "description": "(Required) API key.",
+                          "key": "key",
+                          "value": "<API Key>"
+                        },
+                        {
+                          "description": "(Required) The Programmable Search Engine ID.",
+                          "key": "cx",
+                          "value": "<string>"
+                        },
+                        {
+                          "description": "(Required) The search query.",
+                          "key": "q",
+                          "value": "<string>"
+                        },
+                        {
+                          "description": "Number of results to return (1-10).",
+                          "key": "num",
+                          "value": "<integer>"
+                        },
+                        {
+                          "description": "The index of the first result to return.",
+                          "key": "start",
+                          "value": "<integer>"
+                        },
+                        {
+                          "description": "Language restriction.",
+                          "key": "lr",
+                          "value": "<string>"
+                        },
+                        {
+                          "description": "Safe search setting.",
+                          "key": "safe",
+                          "value": "active"
+                        },
+                        {
+                          "description": "Type of search.",
+                          "key": "searchType",
+                          "value": "image"
+                        },
+                        {
+                          "description": "Image size filter.",
+                          "key": "imgSize",
+                          "value": "<string>"
+                        },
+                        {
+                          "description": "Image type filter.",
+                          "key": "imgType",
+                          "value": "<string>"
+                        },
+                        {
+                          "description": "Restrict results by date.",
+                          "key": "dateRestrict",
+                          "value": "<string>"
+                        },
+                        {
+                          "description": "Sort expression.",
+                          "key": "sort",
+                          "value": "<string>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"kind\": \"<string>\",\n  \"url\": {\n    \"type\": \"<string>\",\n    \"template\": \"<string>\"\n  },\n  \"queries\": {\n    \"request\": [\n      {\n        \"title\": \"<string>\",\n        \"totalResults\": \"<string>\",\n        \"searchTerms\": \"<string>\",\n        \"count\": \"<integer>\",\n        \"startIndex\": \"<integer>\"\n      },\n      {\n        \"title\": \"<string>\",\n        \"totalResults\": \"<string>\",\n        \"searchTerms\": \"<string>\",\n        \"count\": \"<integer>\",\n        \"startIndex\": \"<integer>\"\n      }\n    ],\n    \"nextPage\": [\n      {\n        \"title\": \"<string>\",\n        \"totalResults\": \"<string>\",\n        \"searchTerms\": \"<string>\",\n        \"count\": \"<integer>\",\n        \"startIndex\": \"<integer>\"\n      },\n      {\n        \"title\": \"<string>\",\n        \"totalResults\": \"<string>\",\n        \"searchTerms\": \"<string>\",\n        \"count\": \"<integer>\",\n        \"startIndex\": \"<integer>\"\n      }\n    ]\n  },\n  \"context\": {},\n  \"searchInformation\": {\n    \"searchTime\": \"<number>\",\n    \"formattedSearchTime\": \"<string>\",\n    \"totalResults\": \"<string>\",\n    \"formattedTotalResults\": \"<string>\"\n  },\n  \"items\": [\n    {\n      \"kind\": \"<string>\",\n      \"title\": \"<string>\",\n      \"htmlTitle\": \"<string>\",\n      \"link\": \"<string>\",\n      \"displayLink\": \"<string>\",\n      \"snippet\": \"<string>\",\n      \"htmlSnippet\": \"<string>\",\n      \"cacheId\": \"<string>\",\n      \"formattedUrl\": \"<string>\",\n      \"htmlFormattedUrl\": \"<string>\",\n      \"pagemap\": {},\n      \"mime\": \"<string>\",\n      \"fileFormat\": \"<string>\",\n      \"image\": {\n        \"contextLink\": \"<string>\",\n        \"height\": \"<integer>\",\n        \"width\": \"<integer>\",\n        \"byteSize\": \"<integer>\",\n        \"thumbnailLink\": \"<string>\",\n        \"thumbnailHeight\": \"<integer>\",\n        \"thumbnailWidth\": \"<integer>\"\n      }\n    },\n    {\n      \"kind\": \"<string>\",\n      \"title\": \"<string>\",\n      \"htmlTitle\": \"<string>\",\n      \"link\": \"<string>\",\n      \"displayLink\": \"<string>\",\n      \"snippet\": \"<string>\",\n      \"htmlSnippet\": \"<string>\",\n      \"cacheId\": \"<string>\",\n      \"formattedUrl\": \"<string>\",\n      \"htmlFormattedUrl\": \"<string>\",\n      \"pagemap\": {},\n      \"mime\": \"<string>\",\n      \"fileFormat\": \"<string>\",\n      \"image\": {\n        \"contextLink\": \"<string>\",\n        \"height\": \"<integer>\",\n        \"width\": \"<integer>\",\n        \"byteSize\": \"<integer>\",\n        \"thumbnailLink\": \"<string>\",\n        \"thumbnailHeight\": \"<integer>\",\n        \"thumbnailWidth\": \"<integer>\"\n      }\n    }\n  ]\n}",
+                  "createdAt": "2026-07-28T01:48:57.000Z",
+                  "updatedAt": "2026-07-28T01:48:57.000Z",
+                  "uid": "35240-a3e258ac-052d-42ac-bcdc-b5a59c16f083"
+                }
+              ],
+              "createdAt": "2026-07-28T01:48:57.000Z",
+              "updatedAt": "2026-07-28T01:48:57.000Z",
+              "uid": "35240-beaabfb6-686d-498a-8205-896ac019cb69"
+            }
+          ],
+          "id": "55cc11d0-5cef-428e-9f3e-fa81faf9bf5c",
+          "createdAt": "2026-07-28T01:48:57.000Z",
+          "updatedAt": "2026-07-28T01:48:57.000Z",
+          "uid": "35240-55cc11d0-5cef-428e-9f3e-fa81faf9bf5c"
+        }
+      ],
+      "id": "5bf246bc-0723-49f6-9f4a-c268f8534e72",
+      "createdAt": "2026-07-28T01:48:57.000Z",
+      "updatedAt": "2026-07-28T01:48:57.000Z",
+      "uid": "35240-5bf246bc-0723-49f6-9f4a-c268f8534e72"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "key",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "query",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://customsearch.googleapis.com"
+    }
+  ]
+}

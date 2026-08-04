@@ -1,0 +1,14 @@
+{
+  "provider": "google-custom-search",
+  "sources": [
+    "google-custom-search-customsearch-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-custom-search-customsearch-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
