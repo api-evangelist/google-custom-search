@@ -4,6 +4,18 @@ description: >-
   The Google Custom Search JSON API allows programmatic searches over a website or collection of websites. It returns
   metadata about the search performed, metadata about the search engine used, and the search results including web pages
   and images.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
