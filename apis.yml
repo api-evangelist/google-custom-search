@@ -48,7 +48,7 @@ apis:
   humanURL: https://developers.google.com/custom-search/v1/overview
   baseURL: https://customsearch.googleapis.com
   tags:
-  - Customsearch
+  - Custom Search
   tags_raw:
   - Customsearch
   properties:
