@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Google Custom Search JSON Customsearch API
   description: The Google Custom Search JSON API allows programmatic searches over a website or collection of websites. It returns metadata about the search performed, metadata about the search engine used, and the search results.
@@ -138,19 +138,6 @@ paths:
       - Customsearch
 components:
   schemas:
-    Query:
-      type: object
-      properties:
-        title:
-          type: string
-        totalResults:
-          type: string
-        searchTerms:
-          type: string
-        count:
-          type: integer
-        startIndex:
-          type: integer
     SearchResponse:
       type: object
       properties:
@@ -237,6 +224,19 @@ components:
               type: integer
             thumbnailWidth:
               type: integer
+    Query:
+      type: object
+      properties:
+        title:
+          type: string
+        totalResults:
+          type: string
+        searchTerms:
+          type: string
+        count:
+          type: integer
+        startIndex:
+          type: integer
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
