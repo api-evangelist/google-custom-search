@@ -43,18 +43,16 @@ tags:
   - Search
   - Web Search
 apis:
-- aid: google-custom-search:google-custom-search-customsearch-api
-  name: Google Custom Search Customsearch API
-  description: The Customsearch API from Google Custom Search — 2 operation(s) for customsearch.
+- aid: google-custom-search:google-custom-search-custom-search-api
+  name: Google Custom Search Custom Search API
+  description: The Custom Search API from Google Custom Search — 2 operation(s) for custom search.
   humanURL: https://developers.google.com/custom-search/v1/overview
   baseURL: https://customsearch.googleapis.com
   tags:
   - Custom Search
-  tags_raw:
-  - Customsearch
   properties:
   - type: OpenAPI
-    url: openapi/google-custom-search-customsearch-api-openapi.yml
+    url: openapi/google-custom-search-custom-search-api-openapi.yml
   - type: Documentation
     url: https://developers.google.com/custom-search/v1/reference/rest
   - type: Authentication
