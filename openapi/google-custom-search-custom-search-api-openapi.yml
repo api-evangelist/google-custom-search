@@ -138,6 +138,19 @@ paths:
       - Custom Search
 components:
   schemas:
+    Query:
+      type: object
+      properties:
+        title:
+          type: string
+        totalResults:
+          type: string
+        searchTerms:
+          type: string
+        count:
+          type: integer
+        startIndex:
+          type: integer
     SearchResponse:
       type: object
       properties:
@@ -224,19 +237,6 @@ components:
               type: integer
             thumbnailWidth:
               type: integer
-    Query:
-      type: object
-      properties:
-        title:
-          type: string
-        totalResults:
-          type: string
-        searchTerms:
-          type: string
-        count:
-          type: integer
-        startIndex:
-          type: integer
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
