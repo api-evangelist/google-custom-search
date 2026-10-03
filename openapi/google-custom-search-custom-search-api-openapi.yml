@@ -61,7 +61,7 @@ paths:
           type: string
           enum:
           - active
-          - false
+          - 'off'
       - name: searchType
         in: query
         description: Type of search.
@@ -138,6 +138,52 @@ paths:
       - Custom Search
 components:
   schemas:
+    SearchResult:
+      type: object
+      properties:
+        kind:
+          type: string
+        title:
+          type: string
+        htmlTitle:
+          type: string
+        link:
+          type: string
+        displayLink:
+          type: string
+        snippet:
+          type: string
+        htmlSnippet:
+          type: string
+        cacheId:
+          type: string
+        formattedUrl:
+          type: string
+        htmlFormattedUrl:
+          type: string
+        pagemap:
+          type: object
+        mime:
+          type: string
+        fileFormat:
+          type: string
+        image:
+          type: object
+          properties:
+            contextLink:
+              type: string
+            height:
+              type: integer
+            width:
+              type: integer
+            byteSize:
+              type: integer
+            thumbnailLink:
+              type: string
+            thumbnailHeight:
+              type: integer
+            thumbnailWidth:
+              type: integer
     Query:
       type: object
       properties:
@@ -191,52 +237,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/SearchResult'
-    SearchResult:
-      type: object
-      properties:
-        kind:
-          type: string
-        title:
-          type: string
-        htmlTitle:
-          type: string
-        link:
-          type: string
-        displayLink:
-          type: string
-        snippet:
-          type: string
-        htmlSnippet:
-          type: string
-        cacheId:
-          type: string
-        formattedUrl:
-          type: string
-        htmlFormattedUrl:
-          type: string
-        pagemap:
-          type: object
-        mime:
-          type: string
-        fileFormat:
-          type: string
-        image:
-          type: object
-          properties:
-            contextLink:
-              type: string
-            height:
-              type: integer
-            width:
-              type: integer
-            byteSize:
-              type: integer
-            thumbnailLink:
-              type: string
-            thumbnailHeight:
-              type: integer
-            thumbnailWidth:
-              type: integer
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
