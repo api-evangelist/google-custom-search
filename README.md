@@ -1,4 +1,4 @@
-# Google Custom Search (google-custom-search)
+# Google Custom Search
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,64 +66,142 @@
 
 The Google Custom Search JSON API allows programmatic searches over a website or collection of websites. It returns metadata about the search performed, metadata about the search engine used, and the search results including web pages and images.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/google-custom-search/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-custom-search/refs/heads/main/apis.yml)
+**Areas:** Custom Search · Google · Image Search · Search · Web Search
 
-## Scope
+## Google Custom Search on APIs.io
 
-- **Type:** Index
+Everything profiled for Google Custom Search is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/google-custom-search/](https://apis.io/providers/google-custom-search/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (1)
 
-- Custom Search
-- Google
-- Image Search
-- Search
-- Web Search
+- [Google Custom Search Custom Search API](https://apis.io/apis/google-custom-search/google-custom-search-custom-search-api/) — The Custom Search API from Google Custom Search — 2 operation(s) for custom search.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-13
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Google Custom Search JSON API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Enables programmatic web and image searches over websites or collections of websites using Programmable Search Engines, returning structured search results with metadata.
+- [Google Custom Search Agentic Access](https://apis.io/agentic-access/google-custom-search/google-custom-search-agentic-access/)
 
-- **Human URL:** [https://developers.google.com/custom-search/v1/overview](https://developers.google.com/custom-search/v1/overview)
-- **Base URL:** `https://customsearch.googleapis.com`
+#### JSON Schema (1)
 
-#### Tags
+The data models the API reads and writes.
 
-- Images
-- Search
-- Web
+- [Google Custom Search Result](https://apis.io/schemas/google-custom-search/SearchResult/)
 
-#### Properties
+#### JSON-LD (1)
 
-- [Documentation](https://developers.google.com/custom-search/v1/reference/rest)
-- [OpenAPI](openapi/openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/openapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/openapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Authentication](https://developers.google.com/custom-search/v1/introduction)
-- [Getting Started](https://developers.google.com/custom-search/v1/overview)
-- [JSON Schema](json-schema/SearchResult.json) — [JSON Schema](https://json-schema.org/specification)
+Linked-data contexts for the provider's vocabulary.
 
-## Common Properties
+- [context Context](https://apis.io/jsonld/google-custom-search/context/)
 
-- [Portal](https://developers.google.com/custom-search)
-- [Getting Started](https://developers.google.com/custom-search/v1/overview)
+#### Collections (3)
+
+Postman and Open Collection request collections.
+
+- [Google Custom Search JSON Customsearch API](https://apis.io/collections/google-custom-search/open-google-custom-search-customsearch-api/)
+- [Google Custom Search JSON API](https://apis.io/collections/google-custom-search/open-openapi/)
+- [Google Custom Search JSON Customsearch API](https://apis.io/collections/google-custom-search/postman-google-custom-search-customsearch-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Google Custom Search — jsonschema rules](https://apis.io/rules/google-custom-search/google-custom-search-jsonschema-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Google Custom Search Authentication](https://apis.io/security/google-custom-search/google-custom-search-authentication/)
+- [Google Custom Search Domain Security](https://apis.io/security/google-custom-search/google-custom-search-domain-security/)
+- [Google Custom Search Vulnerability Disclosure](https://apis.io/security/google-custom-search/google-custom-search-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Google Custom Search Plans Pricing](https://apis.io/plans/google-custom-search/google-custom-search-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Google Custom Search Rate Limits](https://apis.io/rate-limits/google-custom-search/google-custom-search-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Google Custom Search Finops](https://apis.io/finops/google-custom-search/google-custom-search-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.google.com/)
 - [Documentation](https://developers.google.com/custom-search/v1/overview)
-- [Authentication](https://developers.google.com/custom-search/v1/introduction)
+- [Getting started](https://developers.google.com/custom-search/v1/overview)
 - [Pricing](https://developers.google.com/custom-search/v1/overview#pricing)
-- [Terms of Service](https://developers.google.com/terms)
-- [Privacy Policy](https://policies.google.com/privacy)
-- [Status Page](https://status.cloud.google.com/)
 - [Support](https://developers.google.com/custom-search/v1/overview#support)
-- [JSON-LD](json-ld/context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
+- [Terms of service](https://developers.google.com/terms)
+- [Privacy policy](https://policies.google.com/privacy)
+- [Status](https://status.cloud.google.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 46.9** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 56.3 |
+| Contract governance | 9.8 |
+| Operational transparency | 34.2 |
+| Developer ergonomics | 51.9 |
+| Access clarity | 39.5 |
+
+**Agent readiness 21.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 30.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/google-custom-search/](https://apis.io/providers/google-custom-search/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Google Custom Search: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/google-custom-search/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
